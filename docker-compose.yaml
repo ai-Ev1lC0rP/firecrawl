@@ -10,6 +10,7 @@ x-common-service: &common-service
 services:
   playwright-service:
     build: apps/playwright-service
+    pull_policy: build
     environment:
       - PORT=3000
       - PROXY_SERVER=${PROXY_SERVER}
